@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.yangjie</groupId>
+  <artifactId>hello</artifactId>
+  <version>1.3</version>
+  <packaging>jar</packaging>
+
+  <name>hello</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+   <!-- 这个是发布用的  -->
+    <distributionManagement>
+        <repository>  
+            <id>nexus-releases</id>  
+           <name>Nexus Release Repository</name>  
+            <url>http://localhost:8081/nexus/content/repositories/releases</url>
+        </repository>  
+        <snapshotRepository>  
+            <id>nexus-snapshots</id>  
+            <name>Nexus Snapshot Repository</name>  
+            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>      
+    </distributionManagement>
+   
+
+     <dependencies>
+     <dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis</artifactId>
+		<version>3.2.8</version>
+       </dependency>
+     </dependencies>
+  <!--
+   指定当前仓库的例子
+   <repositories>     
+	    <repository>     
+	      <id>nexus</id>     
+	      <name>my-nexus-repository</name>     
+	      <url>http://127.0.0.1:7788/nexus/content/groups/public/</url>     
+	      <releases>     
+	        <enabled>true</enabled>     
+	      </releases>     
+	      <snapshots>     
+	        <enabled>false</enabled>     
+	      </snapshots>     
+	    </repository>     
+	  </repositories>     
+	  <pluginRepositories>     
+	    <pluginRepository>     
+	      <id>nexus</id>     
+	      <name>my-nexus-repository</name>     
+	      <url>http://127.0.0.1:7788/nexus/content/groups/public/</url>     
+	      <releases>     
+	        <enabled>true</enabled>     
+	      </releases>     
+	      <snapshots>     
+	        <enabled>false</enabled>     "C:/Users/ADMINI~1/AppData/Local/Temp/360zip$Temp/360$0/pom-4.0.0.xml"
+	      </snapshots>          
+	    </pluginRepository>     
+	  </pluginRepositories>  
+	  
+	    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+   
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>src/main/java/package.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+	    -->
+	  
+</project>
